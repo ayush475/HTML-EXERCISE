@@ -1,0 +1,556 @@
+/* Basic Reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+    top: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    height: 64px;
+}
+
+.navbar input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    order: 2;
+}
+
+.logo {
+    font-size: 2.3rem;
+    order: 1;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #117964;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    margin: 80px auto 20px auto; /* Adjusted margin-top to avoid overlap with the fixed navbar */
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .menu-items {
+        display: flex;
+    }
+
+    .menu-items li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+}
+
+/* Slideshow Styles */
+.carousel {
+    height: 50vh;
+    margin: 0;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 0;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3 {
+    opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+    display: block;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust height as needed */
+    color: black;
+    text-align: center;
+    margin-top: 20px; /* Space between slideshow and hero section */
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    padding: 0 8%;
+}
+
+.container h2 {
+    text-align: center;
+    padding-top: 6%;
+    margin-bottom: 60px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.container h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+
+/* Row Styles */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.row .service {
+    padding: 25px 15px;
+    background: transparent;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.row .service:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.row .service i {
+    color: var(--main-color);
+    margin-bottom: 20px;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.row .service:hover i {
+    color: #fff;
+}
+
+.row .service h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Client Showcase Styles */
+.client-showcase {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.client-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.client-showcase p {
+    font-size: 1.2rem;
+}
+
+/* CTAs Section Styles */
+.ctas {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ctas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ctas button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ctas button:hover {
+    background-color: green;
+}
+
+
+
+/* Awards Section Styles */
+.awards {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.awards h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.awards p {
+    font-size: 1.2rem;
+}
+/* CSS */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust height as needed */
+    color: black;
+    text-align: center;
+    margin-top: 60px; 
+    /* Space between slideshow and hero section */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+
+.hero-text {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #666;
+}
+/* Client showcase */
+.clients {
+    padding-top: 20px;
+    background-color: #f0ecf2;
+}
+
+.clients .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients .client-logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.clients .client-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12%;
+    transition: all 0.3s ease-in-out;
+}
+
+.clients .client-logo:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width:767px){
+    .clients .client-logo {
+        max-width: 150px;
+    }
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    overflow: hidden; /* Hide overflow to prevent showing non-active slides */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Slider Styles */
+.testimonial-slider {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33.33% { opacity: 1; }
+    43.33% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Slide animation timings */
+.testimonial-slide:nth-child(1) {
+    animation: slide 9s linear infinite;
+}
+
+.testimonial-slide:nth-child(2) {
+    animation: slide 9s linear infinite 3s;
+}
+
+.testimonial-slide:nth-child(3) {
+    animation: slide 9s linear infinite 6s;
+}
+
+/* Ensure the active slide is visible */
+.testimonial-slide:nth-child(1) {
+    opacity: 1;
+}
+
+/* Photo Styles */
+.testimonial-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* awards */
+
