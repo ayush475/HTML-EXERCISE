@@ -1,0 +1,95 @@
+/* FAQ Section */
+.faq {
+    /* width: 100%; */
+    margin-top:90px ;
+    max-width: 100vw;
+    /* margin: 2rem auto; */
+    margin: 60px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+  }
+  
+  .faq label {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 60px;
+    padding: 1rem;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #E1E1E1;
+    transition: height 0.5s ease;
+  }
+  
+  .faq input[type="checkbox"] {
+    display: none;
+  }
+  
+  .faq .faq-heading {
+    font-family: Lato, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .faq .faq-text {
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    color: #919191;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  
+  .faq .faq-arrow {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.5s ease;
+    border-top: 2px solid rgba(0, 0, 0, 0.33);
+    border-right: 2px solid rgba(0, 0, 0, 0.33);
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: rotate(45deg);
+  }
+  
+  .faq input[type="checkbox"]:checked + label > .faq-heading {
+    color: #4f7351;
+  }
+  
+  .faq input[type="checkbox"]:checked + label > .faq-arrow {
+    transform: rotate(135deg);
+  }
+  
+  .faq input[type="checkbox"]:checked + label > .faq-text {
+    display: block;
+  }
+  
+  .faq input[type="checkbox"]:checked + label {
+    height: auto;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .faq {
+      width: 90%;
+      /* margin: 2rem auto; */
+    }
+  
+    .faq .faq-heading {
+      font-size: 1rem;
+    }
+  
+    .faq .faq-text {
+      font-size: 0.875rem;
+    }
+  }
+  
+ 
+  
