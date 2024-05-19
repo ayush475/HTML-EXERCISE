@@ -7,30 +7,6 @@ section {
 }
 
 
-.intro {
-    padding: 60px 10%;
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 40px auto; /* Center the section and add margin */
-    max-width: 800px; /* Restrict the maximum width */
-}
-
-.intro-content h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px; /* Add space below the heading */
-    text-transform: uppercase; /* Transform text to uppercase */
-    letter-spacing: 2px; /* Add letter spacing */
-}
-
-.intro-content p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    line-height: 1.6; /* Increase line height for better readability */
-    margin-top: 20px; /* Increase margin top */
-}
 
 
 img {
@@ -96,6 +72,14 @@ img {
     font-weight: bolder;
 }
 
+.contenar_service .card i{
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #303ef7;
+      
+      
+}
+
 .card:hover {
     background: #303ef7;
     color: #fff;
@@ -106,3 +90,29 @@ img {
     color: #fff;
 }
 /* case studies example */
+/* Style for portfolio and FAQ sections */
+#portfolio,
+#faq {
+    margin-top: 50px; /* Adjust as needed */
+    text-align: center;
+}
+
+#portfolio h2,
+#faq h2 {
+    font-size: 2rem;
+    color: #303ef7;
+    text-transform: uppercase;
+}
+
+#portfolio a,
+#faq a {
+    text-decoration: none;
+    color: #303ef7;
+}
+
+#portfolio a:hover,
+#faq a:hover {
+    color: #5c75f7;
+}
+
+
