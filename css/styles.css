@@ -17,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-size: 1.6rem;
 }
 
 /* Navbar Styles */
@@ -29,6 +30,7 @@ body {
     opacity: 0.85;
     z-index: 100;
     top: 0;
+    font-size: 1.6rem;
 }
 
 .navbar-container {
@@ -38,7 +40,7 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: auto;
-    height: 64px;
+    height: 6.4rem;
 }
 
 .navbar input[type="checkbox"] {
@@ -83,10 +85,11 @@ main {
     padding: 2rem;
     text-align: center;
     background-color: white;
-    margin: 80px auto 20px auto; /* Adjusted margin-top to avoid overlap with the fixed navbar */
-    max-width: 800px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 8rem auto 2rem auto; /* Adjusted margin-top to avoid overlap with the fixed navbar */
+    max-width: 80rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
 }
 
 /* Footer Styles */
@@ -98,6 +101,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 1.4rem;
 }
 
 footer p {
@@ -324,8 +328,8 @@ input:checked + .slide-container .nav label {
 }
 
 .row .service:hover {
-    color: #fff;
-    background-color: var(--main-color);
+    color: black;
+    background-color: rgb(161, 161, 223);
     transform: scale(1.05);
 }
 
