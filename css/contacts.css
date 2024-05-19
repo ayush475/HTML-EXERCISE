@@ -1,9 +1,11 @@
 section {
     position: relative;
+margin-top: 60px;
+
     z-index: 3;
     padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=900);
+    padding-bottom: 0px;
+    background-image: url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   
   .contact-container {
@@ -70,7 +72,7 @@ section {
   }
   
   .contact-info-content p {
-    color: #FFF;
+    color: black;
     font-size: 1em;
   }
   
