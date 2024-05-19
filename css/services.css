@@ -5,21 +5,33 @@ section {
     margin-top: 90px;
     padding: 50px 10%;
 }
-.intro{
-    padding:50px 10%;
-    background-color: #fff;
-    text-align: center;
-}
-.intro-content h2{
-    font-size: 2rem;
-    color: #303ef7;
-}
-.intro-content p{
-    font-size: 1.1rem;
 
-    color: #303ef7;
-    margin-top: 10px;
+
+.intro {
+    padding: 60px 10%;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 40px auto; /* Center the section and add margin */
+    max-width: 800px; /* Restrict the maximum width */
 }
+
+.intro-content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px; /* Add space below the heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-top: 20px; /* Increase margin top */
+}
+
 
 img {
     width: 100%;
