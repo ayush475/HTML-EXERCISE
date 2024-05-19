@@ -66,7 +66,7 @@ margin-top: 60px;
   }
   
   .contact-info-content h4 {
-    color: #1da9c0;
+    color: blue;
     font-size: 1.4em;
     margin-bottom: 5px;
   }
@@ -130,20 +130,20 @@ margin-top: 60px;
   .contact-form .input-box input[type="submit"]
   {
     width: 100%;
-    background: #00bcd4;
+    background: blue;
     color: #FFF;
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
-    border: 1px solid #00bcd4;
+    border: 1px solid black;
     transition: 0.5s;
   }
   
   .contact-form .input-box input[type="submit"]:hover
   {
     background: #FFF;
-    color: #00bcd4;
+    color: blue;
   }
   
   @media (max-width: 991px) {
