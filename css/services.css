@@ -4,6 +4,10 @@
 section {
     margin-top: 90px;
     padding: 50px 10%;
+    font-size: 62.5%;
+    font-family: 'Roboto', Arial, sans-serif; 
+
+
 }
 
 
@@ -25,12 +29,12 @@ img {
 }
 
 .heading h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     position: relative;
 }
 
 .heading span {
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid rgb(55, 55, 159);
 }
 
 .contenar_service {
@@ -56,14 +60,14 @@ img {
     padding: 10px;
     font-size: 40px;
     margin-top: 10px;
-    color: #303ef7;
+    color: #323aad;
 }
 
 .contenar_service .card h3 {
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: 600;
     font-weight: bolder;
-    color: #303ef7;
+    color: #6c74d7;
     margin: 1.5rem 0 0 0.5rem;
 }
 
@@ -73,7 +77,7 @@ img {
 }
 
 .contenar_service .card i{
-        font-size: 40px;
+        font-size: 4rem;
         margin-bottom: 10px;
         color: #303ef7;
       
@@ -81,38 +85,36 @@ img {
 }
 
 .card:hover {
-    background: #303ef7;
-    color: #fff;
+    background: #c0c9f2;
+    color: #020202;
     transform: scale(1.05);
 }
 
 .card .bx:hover {
     color: #fff;
 }
-/* case studies example */
-/* Style for portfolio and FAQ sections */
-#portfolio,
-#faq {
-    margin-top: 50px; /* Adjust as needed */
+#portfolio {
+
     text-align: center;
+    margin: auto;
+    
 }
 
-#portfolio h2,
-#faq h2 {
-    font-size: 2rem;
-    color: #303ef7;
-    text-transform: uppercase;
-}
-
-#portfolio a,
-#faq a {
+#portfolio a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff; 
     text-decoration: none;
-    color: #303ef7;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-#portfolio a:hover,
-#faq a:hover {
-    color: #5c75f7;
+#portfolio a:hover {
+    background-color: #0056b3; 
 }
 
-
+#portfolio h2 {
+    margin: 0;
+    font-size: 2rem; /* Adjust the font size as desired */
+}

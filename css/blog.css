@@ -3,6 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Roboto', Arial, sans-serif; 
+
   }
   
   .card {
@@ -55,14 +57,14 @@
   }
   
   .blog-title {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 15px 0;
     color: #333;
   }
   
   .blog-description {
     color: #616b74;
-    font-size: 1rem;
+    font-size: 1.8rem;
     line-height: 1.5;
   }
   
@@ -83,10 +85,7 @@
     margin-left: 15px;
   }
   
-  .profile-name {
-    font-size: 1rem;
-    color: #333;
-  }
+  
   
   .profile-followers {
     color: #9ca3af;
